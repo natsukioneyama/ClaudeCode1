@@ -15,7 +15,7 @@ body {
 body {
   background: #f7f7f7;
   color: #111;
-  font-family: "Cormorant Garamond", serif;
+  font-family: "Instrument Sans", sans-serif;
   font-weight: 300;
   font-style: normal;
   letter-spacing: 0.02em;
@@ -97,7 +97,7 @@ INFO HERO
 }
 
 .info-content h1 {
-  font-size: 1.7rem;
+  font-size: 2.5rem;
   font-weight: 400;
   margin: 0 0 20px;
 }
@@ -121,7 +121,8 @@ INFO HERO
   max-width: none;
   margin: 0;
   padding: 0;
-  text-align: justify;
+  text-align: left;
+  letter-spacing: 0.02em;
 }
 
 .clients-block {
@@ -148,7 +149,7 @@ INFO HERO
 .clients-list {
   font-size: 15px;
   line-height: 1.6;
-  letter-spacing: 0.06em;
+  letter-spacing: 0.02em;
 }
 
 
@@ -203,37 +204,6 @@ INFO HERO
   opacity: 0.6;
   text-align: center;
 }
-
-/* =========================
-SELECTED WORKS INTRO
-========================= */
-
-.selected-works-intro {
-  width: min(92vw, 1500px);
-  margin: 50px auto 0;
-  display: flex;
-  align-items: center;
-  gap: 15px;
-  top: 13px;
-  z-index: 100;
-}
-
-.selected-works-intro::after {
-  content: "";
-  height: 1px;
-  background: #999;
-  flex: 1;
-}
-
-.selected-works-intro p {
-  text-transform: uppercase;
-  font-size: 0.9rem;
-  letter-spacing: 0.02em;
-  font-weight: 400;
-  font-family: "Cormorant Garamond", serif;
-}
-
-
 
 
 
@@ -425,22 +395,71 @@ FEATURED PROJECT AC
 /* =========================
 FEATURED PROJECT OFFICE X KEEN — AUTO SCROLL MARQUEE
 ========================= */
+.featured-project-officexkeen .office-header {
+  display: flex;
+  justify-content: flex-start;
+  align-items: baseline;
+  gap: 12px;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
+  margin-bottom: 12px;
+  padding-left: 6px;
+}
+
+.featured-project-officexkeen .office-header-label {
+  margin: 0;
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
 .featured-project-officexkeen .featured-project-text {
-  margin: 0 auto 40px;
-  max-width: none;
-  text-align: center;
+  display: contents;
+}
+
+@media (min-width: 700px) {
+  .featured-project-officexkeen .office-header {
+    padding-bottom: 0;
+    min-height: 0;
+  }
+
+  .featured-project-officexkeen .office-header-label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  .featured-project-officexkeen .featured-label {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 0;
+  }
+
+  .featured-project-officexkeen h2 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    margin-bottom: 0;
+  }
 }
 
 .office-marquee {
   position: relative;
   overflow: hidden;
-  width: 100%;
+  width: 100vw;
+  margin-left: calc(50% - 50vw);
+  margin-right: calc(50% - 50vw);
 }
 
 .office-marquee-track {
   display: flex;
   width: max-content;
-  animation: office-marquee-scroll 32s linear infinite;
+  animation: office-marquee-scroll 15s linear infinite;
   will-change: transform;
 }
 
@@ -454,11 +473,11 @@ FEATURED PROJECT OFFICE X KEEN — AUTO SCROLL MARQUEE
 }
 
 .office-marquee-item {
-  height: 300px;
+  height: clamp(480px, 68svh, 760px);
   width: auto;
   flex-shrink: 0;
   display: block;
-  margin-right: 24px;
+  margin-right: 0;
   cursor: pointer;
 }
 
@@ -479,14 +498,42 @@ FEATURED PROJECT OFFICE X KEEN — AUTO SCROLL MARQUEE
 }
 
 @media (max-width: 900px) {
-  .featured-project-officexkeen .featured-project-text {
-    text-align: left;
-    margin: 0 0 24px;
+  .office-marquee-item {
+    height: clamp(300px, 55svh, 520px);
+    margin-right: 0;
+  }
+}
+
+@media (max-width: 699px) {
+  .featured-project-officexkeen .office-header {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4px;
+    width: 100vw;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+    margin-top: 0;
+    margin-bottom: 12px;
+    padding-left: 6px;
+    padding-bottom: 0;
+    font-size: 14px;
   }
 
-  .office-marquee-item {
-    height: 200px;
-    margin-right: 12px;
+  .featured-project-officexkeen .office-header-label {
+    align-self: flex-start;
+  }
+
+  .featured-project-officexkeen .featured-project-text {
+    display: flex;
+    order: 0;
+    justify-self: start;
+    align-self: flex-start;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0;
+    white-space: normal;
+    margin: 0;
   }
 }
 
@@ -639,15 +686,6 @@ RESPONSIVE
     font-size: 15px;
   }
 
-
- .selected-works-intro::before {
-  width: 100%;
- }
-
-  .selected-works-intro p {
-    margin: 0;
-    text-align: left;
-  }
 
 
   .featured-project {
