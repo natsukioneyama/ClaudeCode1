@@ -422,6 +422,75 @@ FEATURED PROJECT AC
 }
 
 
+/* =========================
+FEATURED PROJECT OFFICE X KEEN — AUTO SCROLL MARQUEE
+========================= */
+.featured-project-officexkeen .featured-project-text {
+  margin: 0 auto 40px;
+  max-width: none;
+  text-align: center;
+}
+
+.office-marquee {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+
+.office-marquee-track {
+  display: flex;
+  width: max-content;
+  animation: office-marquee-scroll 32s linear infinite;
+  will-change: transform;
+}
+
+.office-marquee:hover .office-marquee-track {
+  animation-play-state: paused;
+}
+
+.office-marquee-group {
+  display: flex;
+  flex-shrink: 0;
+}
+
+.office-marquee-item {
+  height: 300px;
+  width: auto;
+  flex-shrink: 0;
+  display: block;
+  margin-right: 24px;
+  cursor: pointer;
+}
+
+@keyframes office-marquee-scroll {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .office-marquee-track {
+    animation: none;
+    transform: none;
+  }
+}
+
+@media (max-width: 900px) {
+  .featured-project-officexkeen .featured-project-text {
+    text-align: left;
+    margin: 0 0 24px;
+  }
+
+  .office-marquee-item {
+    height: 200px;
+    margin-right: 12px;
+  }
+}
+
+
 
 
 
