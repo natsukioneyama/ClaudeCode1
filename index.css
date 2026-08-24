@@ -522,6 +522,10 @@ FEATURED PROJECT OFFICE X KEEN — AUTO SCROLL MARQUEE
 
   .featured-project-officexkeen .office-header-label {
     align-self: flex-start;
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
+    margin: 0;
   }
 
   .featured-project-officexkeen .featured-project-text {
@@ -531,8 +535,16 @@ FEATURED PROJECT OFFICE X KEEN — AUTO SCROLL MARQUEE
     align-self: flex-start;
     flex-direction: column;
     align-items: flex-start;
-    gap: 0;
+    gap: 4px;
     white-space: normal;
+    margin: 0;
+  }
+
+  .featured-project-officexkeen .featured-project-text .featured-label,
+  .featured-project-officexkeen .featured-project-text h2 {
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 1;
     margin: 0;
   }
 }
