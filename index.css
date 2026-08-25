@@ -339,7 +339,11 @@ INFO HERO
   font-size: 12px;
   letter-spacing: 0.04em;
   opacity: 0.6;
-  text-align: center;
+  text-align: left;
+}
+
+.copyright p {
+  margin: 6px 0 0;
 }
 
 
