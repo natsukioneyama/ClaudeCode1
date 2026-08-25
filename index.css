@@ -192,11 +192,6 @@ INFO HERO
   text-decoration: none;
 }
 
-
-
-
-
-
 .copyright {
   margin: 20px;
   font-size: 12px;
@@ -206,35 +201,11 @@ INFO HERO
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 /* =========================
 FEATURED PROJECT
 ========================= */
 .featured-project {
-  margin: 120px auto 200px;
+  margin: 0 auto 80px;
   width: 100%;
 }
 
@@ -352,82 +323,94 @@ FEATURED PROJECT
 
 
 /* =========================
-FEATURED PROJECT OFFICE X KEEN — AUTO SCROLL MARQUEE
+PROJECT MARQUEE — SHARED AUTO SCROLL HEADER + SLIDER
 ========================= */
-.featured-project-officexkeen .office-header {
-  display: flex;
-  justify-content: flex-start;
-  align-items: baseline;
-  gap: 12px;
+.project-marquee-layout {
+  display: grid;
+  grid-template-columns: 72px 1fr;
   width: 100vw;
   margin-left: calc(50% - 50vw);
   margin-right: calc(50% - 50vw);
-  margin-bottom: 12px;
-  padding-left: 6px;
 }
 
-.featured-project-officexkeen .office-header-label {
+.project-marquee-category {
+  grid-column: 1;
+  grid-row: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
   margin: 0;
-  font-size: 0.9rem;
+  font-size: 14px;
   font-weight: 400;
+  line-height: 1;
   text-transform: uppercase;
   letter-spacing: 0.02em;
   white-space: nowrap;
+  overflow: hidden;
 }
 
-.featured-project-officexkeen .featured-project-text {
+.project-marquee-content {
+  grid-column: 2;
+  min-width: 0;
+}
+
+.project-marquee-header {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.project-marquee-header .featured-project-text {
   display: contents;
 }
 
+.project-marquee-header .featured-project-text .featured-label {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+}
+
+.project-marquee-header .featured-project-text h2 {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 1;
+  margin: 0;
+}
+
 @media (min-width: 700px) {
-  .featured-project-officexkeen .office-header {
-    padding-bottom: 0;
-    min-height: 0;
+  .project-marquee-header .featured-project-text .featured-label {
+    order: 1;
   }
 
-  .featured-project-officexkeen .office-header-label {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1;
-    margin-bottom: 0;
-  }
-
-  .featured-project-officexkeen .featured-label {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1;
-    margin-bottom: 0;
-  }
-
-  .featured-project-officexkeen h2 {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1;
-    margin-bottom: 0;
+  .project-marquee-header .featured-project-text h2 {
+    order: 2;
   }
 }
 
-.office-marquee {
+.project-marquee {
   position: relative;
   overflow: hidden;
-  width: 100vw;
-  margin-left: calc(50% - 50vw);
-  margin-right: calc(50% - 50vw);
+  width: 100%;
+  margin: 0;
 }
 
-.office-marquee-track {
+.project-marquee-track {
   display: flex;
   width: max-content;
-  animation: office-marquee-scroll 15s linear infinite;
+  animation: project-marquee-scroll 15s linear infinite;
   will-change: transform;
 }
 
-.office-marquee-group {
+.project-marquee-group {
   display: flex;
   flex-shrink: 0;
 }
 
-.office-marquee-item {
+.project-marquee-item {
   height: clamp(480px, 68svh, 760px);
   width: auto;
   flex-shrink: 0;
@@ -436,7 +419,7 @@ FEATURED PROJECT OFFICE X KEEN — AUTO SCROLL MARQUEE
   cursor: pointer;
 }
 
-@keyframes office-marquee-scroll {
+@keyframes project-marquee-scroll {
   from {
     transform: translateX(0);
   }
@@ -446,61 +429,32 @@ FEATURED PROJECT OFFICE X KEEN — AUTO SCROLL MARQUEE
 }
 
 @media (prefers-reduced-motion: reduce) {
-  .office-marquee-track {
+  .project-marquee-track {
     animation: none;
     transform: none;
   }
 }
 
 @media (max-width: 900px) {
-  .office-marquee-item {
+  .project-marquee-item {
     height: clamp(300px, 55svh, 520px);
     margin-right: 0;
   }
 }
 
 @media (max-width: 699px) {
-  .featured-project-officexkeen .office-header {
-    display: flex;
+  .featured-project {
+    margin: 0 auto 60px;
+  }
+
+  .project-marquee-layout {
+    grid-template-columns: 40px 1fr;
+  }
+
+  .project-marquee-header {
     flex-direction: column;
     align-items: flex-start;
     gap: 4px;
-    width: 100vw;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
-    margin-top: 0;
-    margin-bottom: 12px;
-    padding-left: 6px;
-    padding-bottom: 0;
-    font-size: 14px;
-  }
-
-  .featured-project-officexkeen .office-header-label {
-    align-self: flex-start;
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1;
-    margin: 0;
-  }
-
-  .featured-project-officexkeen .featured-project-text {
-    display: flex;
-    order: 0;
-    justify-self: start;
-    align-self: flex-start;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 4px;
-    white-space: normal;
-    margin: 0;
-  }
-
-  .featured-project-officexkeen .featured-project-text .featured-label,
-  .featured-project-officexkeen .featured-project-text h2 {
-    font-size: 14px;
-    font-weight: 400;
-    line-height: 1;
-    margin: 0;
   }
 }
 
@@ -654,10 +608,6 @@ RESPONSIVE
   }
 
 
-
-  .featured-project {
-    margin: 120px auto 140px;
-  }
 
   .featured-project-inner {
     width: min(88vw, 620px);
