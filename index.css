@@ -352,47 +352,6 @@ FEATURED PROJECT
 
 
 /* =========================
-FEATURED PROJECT AC
-========================= */
-.featured-project-ac .featured-project-main {
-  grid-template-columns: 280px 280px;
-  column-gap: 20px;
-  row-gap: 20px;
-  align-items: start;
-  justify-content: center;
-}
-
-.featured-project-ac .featured-main-image {
-  width: 280px;
-}
-
-.featured-project-ac .featured-ac-image-left {
-  grid-column: 1;
-  grid-row: 2;
-  width: 280px;
-}
-
-.featured-project-ac .featured-ac-image-right {
-  grid-column: 2;
-  grid-row: 2;
-  width: 280px;
-}
-
-.featured-project-ac .featured-ac-image img {
-  width: 100%;
-  aspect-ratio: 4 / 5;
-  object-fit: cover;
-  display: block;
-}
-
-.featured-project-ac .featured-project-text {
-  margin-left: 60px;
-  align-self: center;
-  transform: translateY(10px);
-}
-
-
-/* =========================
 FEATURED PROJECT OFFICE X KEEN — AUTO SCROLL MARQUEE
 ========================= */
 .featured-project-officexkeen .office-header {
@@ -461,10 +420,6 @@ FEATURED PROJECT OFFICE X KEEN — AUTO SCROLL MARQUEE
   width: max-content;
   animation: office-marquee-scroll 15s linear infinite;
   will-change: transform;
-}
-
-.office-marquee:hover .office-marquee-track {
-  animation-play-state: paused;
 }
 
 .office-marquee-group {
@@ -782,29 +737,6 @@ RESPONSIVE
   display: block;
 }
 
-
-  .featured-project-ac .featured-project-main {
-    gap: 10px;
-    align-items: flex-start;
-  }
-
-  .featured-project-ac .featured-main-image {
-    order: 2;
-    width: 100%;
-    align-self: flex-start;
-  }
-
-  .featured-project-ac .featured-project-text {
-  margin: 0;
-  align-self: flex-start;
-  transform: none;
-  text-align: left;
-}
-
-  .featured-project-ac .featured-ac-image-left,
-  .featured-project-ac .featured-ac-image-right {
-    display: none;
-  }
 }
 
 
