@@ -31,18 +31,27 @@
   <script src="./justified-layout.umd.js" defer></script>
 </head>
 
-
 <body class="page-info">
 
-<header class="topbar">
-  <nav class="topnav" aria-label="Primary navigation">
-    <a href="overview.html">Overview</a>
-    <a href="mailto:natsukimua@gmail.com">Contact</a>
-  </nav>
-</header>
+<button type="button" class="menu-toggle" id="menu-toggle" aria-label="Open menu" aria-expanded="false" aria-controls="site-menu">
+  <span class="menu-toggle-line"></span>
+  <span class="menu-toggle-line"></span>
+  <span class="menu-toggle-line"></span>
+</button>
 
-
-
+<div class="site-menu" id="site-menu" aria-hidden="true">
+  <div class="site-menu-inner">
+    <p class="site-menu-name">Natsuki Oneyama</p>
+    <h2 class="site-menu-title">Menu</h2>
+    <nav class="site-menu-nav" aria-label="Main menu">
+      <a href="overview.html">Overview</a>
+      <a href="mailto:natsukimua@gmail.com">Contact</a>
+      <a href="https://www.instagram.com/natsukimua/" target="_blank" rel="noopener">Instagram</a>
+      <a href="https://models.com/people/natsuki-oneyama" target="_blank" rel="noopener">Models.com</a>
+      <a href="#">PDF</a>
+    </nav>
+  </div>
+</div>
 
 <main class="info-page">
 
@@ -77,28 +86,13 @@
   </p>
 </div>
 
-<div class="info-links">
-
-  <div class="social-links">
-    <a href="https://www.instagram.com/natsukimua/" target="_blank" rel="noopener">@NATSUKIMUA</a>
-    <a href="https://models.com/people/natsuki-oneyama" target="_blank" rel="noopener">Models.COM</a>
-  </div>
-
- <div class="pdf-link">
-  <span>PDF</span>
-  <a href="#">Commercial portfolio available upon request</a>
- </div>
-
-
-</div>
-
 </div>
 
 </section>
 
 
 
-<section class="featured-project featured-project-officexkeen">
+<section class="featured-project featured-project-officexkeen" id="projects">
   <div class="featured-project-inner">
   <div class="project-marquee-layout">
     <p class="project-marquee-category">SELECTED WORKS</p>
@@ -392,6 +386,23 @@
   </div>
   </div>
 </section>
+
+<footer class="info-footer-grid">
+
+  <a class="info-grid-overview" href="overview.html">Overview</a>
+  <a class="info-grid-contact" href="mailto:natsukimua@gmail.com">Contact</a>
+
+  <div class="social-links">
+    <a href="https://www.instagram.com/natsukimua/" target="_blank" rel="noopener">@NATSUKIMUA</a>
+    <a href="https://models.com/people/natsuki-oneyama" target="_blank" rel="noopener">Models.COM</a>
+  </div>
+
+  <div class="pdf-link">
+    <span>PDF</span>
+    <a href="#">Commercial portfolio available upon request</a>
+  </div>
+
+</footer>
 
   <div class="copyright">©2026 Natsuki Oneyama</div>
 
