@@ -1107,6 +1107,29 @@ body.page-pdf-request {
   outline-offset: 4px;
 }
 
+.pdf-request-submit:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.pdf-request-honeypot {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  padding: 0;
+  border: 0;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+}
+
+.pdf-request-status {
+  margin: 16px 0 0;
+  font-size: 14px;
+  min-height: 1.4em;
+}
+
 @media (max-width: 699px) {
   .pdf-request-header {
     padding: 18px 20px;
